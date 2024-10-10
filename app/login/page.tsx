@@ -47,8 +47,9 @@ const Login = () => {
 
         if (res?.error) {
             setError("Invalid email or password");
-            if (res?.url) router.replace("/dashboard");
+            
         } else {
+            if (res?.url) router.replace("/dashboard");
             setError("");
         }
     };
